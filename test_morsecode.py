@@ -19,7 +19,7 @@ class TestMorseCode(unittest.TestCase):
 
     def test_is_validated_english_sentence(self):
         self.assertFalse(mc.is_validated_english_sentence("!_X_!"))
-        self.assertFalse(mc.is_validated_english_sentence(".$."))
+        self.assertFalse(mc.is_validated_english_sentence(D))
         self.assertFalse(mc.is_validated_english_sentence("Base_ball"))
         self.assertFalse(mc.is_validated_english_sentence("def main()"))
         self.assertFalse(mc.is_validated_english_sentence("..."))
@@ -166,3 +166,6 @@ class TestMorseCode(unittest.TestCase):
             "K": "-.-", "X": "-..-", "J": ".---", "W": ".--", "L": ".-..", "Y": "-.--", "M": "--", "Z": "--.."
         }
         return morse_code
+
+if __name__== "__main__":
+    unittest.main()
