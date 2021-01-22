@@ -19,7 +19,7 @@ class TestMorseCode(unittest.TestCase):
 
     def test_is_validated_english_sentence(self):
         self.assertFalse(mc.is_validated_english_sentence("!_X_!"))
-        self.assertFalse(mc.is_validated_english_sentence(D))
+        self.assertFalse(mc.is_validated_english_sentence("D"))
         self.assertFalse(mc.is_validated_english_sentence("Base_ball"))
         self.assertFalse(mc.is_validated_english_sentence("def main()"))
         self.assertFalse(mc.is_validated_english_sentence("..."))
