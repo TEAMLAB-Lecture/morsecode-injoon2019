@@ -19,7 +19,7 @@ class TestMorseCode(unittest.TestCase):
 
     def test_is_validated_english_sentence(self):
         self.assertFalse(mc.is_validated_english_sentence("!_X_!"))
-        #self.assertFalse(mc.is_validated_english_sentence("D"))
+        self.assertFalse(mc.is_validated_english_sentence(".$."))
         self.assertFalse(mc.is_validated_english_sentence("Base_ball"))
         self.assertFalse(mc.is_validated_english_sentence("def main()"))
         self.assertFalse(mc.is_validated_english_sentence("..."))
@@ -122,7 +122,7 @@ class TestMorseCode(unittest.TestCase):
                 self.assertIn("WRONG", console[3].upper())
                 self.assertIn(".-- - ..-.", console[4].upper())
                 self.assertIn("GM", console[5].upper())
-                # self.assertIn("GG GT T T TEEEE", console[6].upper())
+                self.assertIn("GG GT T T TEEEE", console[6].upper())
                 self.assertIn("WRONG", console[7].upper())
 
 
